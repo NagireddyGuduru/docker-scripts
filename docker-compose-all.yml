@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+
+  tomcat-container:
+    build:
+      context: ./tomcat
+      dockerfile: Dockerfile
+    image: mytomcat-image
+    
+  nexus-container:
+    build:
+      context: ./nexus
+      dockerfile: Dockerfile
+    image: mynexus-image
