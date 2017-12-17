@@ -10,6 +10,7 @@ services:
     container_name: mytomcat-server
     ports:
       - 9091:8080
+      - 9092:8080
 
   nexus-container:
     build:
@@ -19,3 +20,12 @@ services:
     container_name: mynexus-server
     ports:
       - 8082:8081
+ 
+  sonar-container:
+    build:
+      context: ./sonar
+      dockerfile: Dockerfile
+    image: sonar-image
+    container_name: sonar-server
+    ports:
+      - 9000:9000
