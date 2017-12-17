@@ -1,0 +1,2 @@
+FROM sonatype/nexus:oss
+
